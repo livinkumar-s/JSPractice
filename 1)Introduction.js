@@ -24,6 +24,7 @@
 // console.log(x);
 // console.log(Number(x));
 
-console.log(Number("hello"));
+// console.log(Number("hello"));
+
 
 

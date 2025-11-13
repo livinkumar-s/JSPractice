@@ -206,11 +206,8 @@ Symbol	Symbol('id')	Unique identifiers
 ➡️ Stored by reference (can hold multiple values)
 
 Object
-
 Array
-
 Function
-
 NaN
 
 
@@ -276,11 +273,8 @@ console.log(Boolean("Hi"));  // true
 🔹 Special Notes
 
 null means intentional absence of value
-
 undefined means variable declared but not assigned
-
 NaN (Not-a-Number) occurs when you perform invalid numeric operations:
-
 console.log("abc" * 2); // NaN
 
 
@@ -290,19 +284,150 @@ console.log("abc" * 2); // NaN
 🧩 Mini Practice Tasks
 
 1. Create 3 variables: your name, age, and whether you are a student — then print them.
-
-
 2. Try using typeof on each.
-
-
 3. Reassign a variable declared with let and see the result.
-
-
 4. Try redeclaring a const variable and note the error.
-
-
 5. Convert "123" to a number and add 10.
 
+Perfect 👍 Let’s focus on Section 3: Operators and Expressions — here’s a clear, structured version ready for teaching (same style as your Python series):
 
 
+---
+
+🔹 1. What are Operators?
+
+Operators are symbols that perform operations on values or variables.
+Example:
+
+2 + 3 = 5
+
+
+---
+
+🔹 2. Types of Operators
+
+🟢 Arithmetic Operators
+
+Used for mathematical calculations.
+
+Operator	Description	Example	Result
+
++	Addition	5 + 2	7
+-	Subtraction	5 - 2	3
+*	Multiplication	5 * 2	10
+/	Division	5 / 2	2.5
+%	Modulus (remainder)	5 % 2	1
+**	Exponentiation	2 ** 3	8
+
+BODMAS
+
+---
+
+🟢 Assignment Operators
+
+Used to assign or update values.
+
+Operator	Example	Meaning
+
+=	x = 10	Assign 10 to x
++=	x += 5	x = x + 5
+-=	x -= 3	x = x - 3
+*=	x *= 2	x = x * 2
+/=	x /= 2	x = x / 2
+            
+             post          pre
+increment--> a++           ++a
+increment--> a--           --a
+
+post --> assignment first, dec next
+pre --> dec first, assignment next
+
+---
+
+🟢 Comparison Operators
+
+Used to compare two values and return a Boolean (true or false).
+
+Operator	Description	Example	Result
+
+==	Equal to (loose)	"5" == 5	true
+===	Equal (strict — checks type)	"5" === 5	false
+!=	Not equal (loose)	5 != "5"	false
+!==	Not equal (strict)	5 !== "5"	true
+>	Greater than	10 > 5	true
+<	Less than	3 < 5	true
+>=	Greater or equal	10 >= 10	true
+<=	Less or equal	4 <= 2	false
+
+
+
+---
+
+🟢 Logical Operators
+
+Used to combine conditions.
+
+Operator	Description	Example	Result
+
+&&	AND	(age > 18 && age < 60)	true if both true
+`		`	OR
+!	NOT	!(5 > 2)	false
+
+
+
+---
+
+🟢 Ternary Operator
+
+Used for short conditional expressions.
+Syntax:
+
+condition ? expressionIfTrue : expressionIfFalse
+
+Example:
+
+let age = 18;
+let message = (age >= 18) ? "Adult" : "Minor";
+console.log(message); // "Adult"
+
+
+---
+
+🟢 String Operators
+
++ can also join strings (concatenation).
+
+let firstName = "Livi";
+let lastName = "Kumar";
+console.log(firstName + " " + lastName); // "Livi Kumar"
+
+Or use template literals:
+
+console.log(`${firstName} ${lastName}`);
+
+
+---
+
+🔹 3. Expressions
+
+An expression is a combination of values, variables, and operators that produces a result.
+Example:
+
+let result = (10 + 5) * 2;  // Expression evaluates to 30
+
+
+---
+
+🧩 Hands-on Tasks
+
+1. Write a program to find the remainder of 10 divided by 3.
+
+
+2. Compare two numbers using both == and === and explain the result.
+
+
+3. Use the ternary operator to check if a number is positive or negative.
+
+
+4. Combine two strings using both + and template literals.
 
