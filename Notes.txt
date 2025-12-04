@@ -423,6 +423,7 @@ let result = (10 + 5) * 2;  // Expression evaluates to 30
 1. Write a program to find the remainder of 10 divided by 3.
 
 
+
 2. Compare two numbers using both == and === and explain the result.
 
 
@@ -431,3 +432,263 @@ let result = (10 + 5) * 2;  // Expression evaluates to 30
 
 4. Combine two strings using both + and template literals.
 
+
+
+---
+
+🧩 4. Control Statements — Detailed Explanation
+
+Control statements help you control how your program runs.
+They decide what to execute, how many times to execute, and when to stop.
+
+
+---
+⭐ Part 1: Conditional Statements
+
+Conditional statements let your program make decisions.
+
+
+---
+
+✅ 1. if Statement
+
+Executes a block of code only if a condition is true.
+
+let age = 18;
+
+if (age >= 18) {
+    console.log("You are an adult");
+}
+
+✔ Runs only when condition is true
+✔ If false, it skips the block
+
+
+---
+
+✅ 2. if...else Statement
+
+When the condition in if is false, else runs.
+
+let marks = 40;
+
+if (marks >= 50) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}
+
+
+---
+
+✅ 3. else if
+
+Used when you have multiple conditions.
+
+let temp = 35;
+
+if (temp > 40) {
+    console.log("Very Hot");
+} else if (temp > 30) {
+    console.log("Hot");
+} else if (temp > 20) {
+    console.log("Warm");
+} else {
+    console.log("Cold");
+}
+
+✔ Checks conditions one by one
+✔ The first true condition executes and exits
+
+
+---
+
+✅ 4. switch Statement
+
+Used when you want to compare a value with many fixed cases.
+
+let day = 3;
+
+switch(day) {
+    case 1:
+        console.log("Monday");
+        break;
+
+    case 2:
+        console.log("Tuesday");
+        break;
+
+    case 3:
+        console.log("Wednesday");
+        break;
+
+    default:
+        console.log("Invalid day");
+}
+
+Why break?
+
+To stop executing the remaining cases
+
+Without break, all cases will run (called "fall-through")
+
+
+
+---
+
+⭐ Part 2: Loops
+
+Loops help you repeat a block of code.
+
+
+---
+
+✅ 1. for Loop
+
+Runs code a specific number of times.
+
+for (let i = 1; i <= 5; i++) {
+    console.log("Number:", i);
+}
+
+Breakdown:
+
+Part	Meaning
+
+let i = 1	Start value
+i <= 5	End condition
+i++	Increment
+
+
+Runs 5 times.
+
+
+---
+
+✅ 2. while Loop
+
+Runs as long as the condition is true.
+
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+✔ Use this when you don’t know how many times the loop should run
+✔ Must update i inside loop (otherwise infinite loop)
+
+
+---
+
+✅ 3. do...while Loop
+
+Runs at least once, even if the condition is false.
+
+let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+✔ Executes once before checking the condition
+
+Example where condition is false but loop still runs once:
+
+let count = 10;
+
+do {
+    console.log(count); // prints 10 once
+} while (count < 5);
+
+
+---
+
+✅ 4. break Statement
+
+Stops the loop immediately.
+
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) break;
+    console.log(i);
+}
+
+Output: 1 2 3 4
+
+
+---
+
+✅ 5. continue Statement
+
+Skips the current loop iteration.
+
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) continue;
+    console.log(i);
+}
+
+Output: 1 2 4 5
+(3 is skipped)
+
+
+---
+
+⭐ Part 3: Nested Loops
+
+Loop inside another loop.
+
+Example: 1 to 3 three times.
+
+for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 3; j++) {
+        console.log(i, j);
+    }
+}
+
+Used for:
+
+Patterns
+
+Grids
+
+Multiplication tables
+
+
+
+---
+
+🎯 Summary
+
+Control statements allow you to:
+✔ Make decisions (if, else if, switch)
+✔ Repeat actions (for, while, do...while)
+✔ Control loop flow (break, continue)
+✔ Use loops inside loops (nested loops)
+
+
+Type CASTING
+--------------
+Number()--> Converts to number 
+String()
+
+
+
+Function 
+------------
+name() ---> calling
+
+Named Function (Hoisting)
+-----------------
+function fnName(){
+    block of code
+}
+
+Function Expression 
+--------------------
+const fnName=()=>{
+    block of code
+}
+
+hoisting
